@@ -7,7 +7,6 @@ import DropdownMenu from './../tailus-ui/Dropdown';
 import { Badge } from './../tailus-ui/Badge';
 import { Text, Title } from './../tailus-ui/typography';
 import { Card } from './../tailus-ui/Card';
-import { useState } from 'react';
 
 interface order {
     id: number;
@@ -54,7 +53,7 @@ function getInitials(name: string): string {
 }
 
 export const Orders = () => {
-    const [hoveredIndex, setHoveredIndex] = useState(null);
+    // const [hoveredIndex, setHoveredIndex] = useState(null);
     return (
         <Card variant="outlined" className="overflow-x-auto lg:overflow-clip">
             <div className="sticky left-0 mb-6">

@@ -1,7 +1,6 @@
 import {
     list,
     type ListProps as ListVariants,
-    type TextWeightProp
 } from "@tailus/themer"
 import React from "react"
 import { twMerge } from "tailwind-merge"
@@ -30,7 +29,6 @@ export interface ListProps extends React.HTMLAttributes<HTMLUListElement | HTMLO
     children: React.ReactNode,
     className?: string,
     size?: ListSizeProp;
-    weight?: TextWeightProp;
     neutral?: boolean;
     inside?: ListInsideProp;
     type?: ListVariants["type"]
@@ -39,7 +37,6 @@ export interface ListProps extends React.HTMLAttributes<HTMLUListElement | HTMLO
 export const List: React.FC<ListProps> = ({
     size,
     as="ul",
-    weight,
     neutral,
     inside,
     type,
@@ -63,7 +60,6 @@ export const List: React.FC<ListProps> = ({
             inside,
             type,
             neutral,
-            weight,
             class : twMerge("space-y-2 my-6", className)
         })} {...props}>
             {children}
